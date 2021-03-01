@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class LottoGameScreen {
     private static final String LOTTO_TICKET_COUNT = "%d개를 구매했습니다.";
     private static final String LOTTO_PREFIX = "[";
-    private static final String LOTTO_SUTFIX = "]";
+    private static final String LOTTO_SUFFIX = "]";
     private static final String DELIMITER = ", ";
     private static final String RESULT = "당첨통계";
     private static final String LINE = "----------";
@@ -51,7 +51,7 @@ public class LottoGameScreen {
     private String makeSingleLottoTicketStatus(final List<LottoBall> lottoBalls) {
         return lottoBalls.stream()
                 .map(lottoBall -> String.valueOf(lottoBall.getValue()))
-                .collect(Collectors.joining(DELIMITER, LOTTO_PREFIX, LOTTO_SUTFIX));
+                .collect(Collectors.joining(DELIMITER, LOTTO_PREFIX, LOTTO_SUFFIX));
     }
 
     private void showMatchesResult(final LottoGameResultDto lottoGameResultDto) {
